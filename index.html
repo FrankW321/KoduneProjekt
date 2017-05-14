@@ -1,12 +1,23 @@
-﻿<!DOCTYPE html>
-<html>
-	<head>
-		<title>Laualeidja</title>
-		<link rel="stylesheet" type="text/css" href="css\main.css">
-	</head>
-	<body>
-		<canvas id="tahvel"> </canvas><br/>
-		<h1>Vajuta nuppu, et leida laud</h1>
-		<input type="image" class="finish" src="img\sec.png" alt="Submit" />
-	</body>
+﻿<html>
+
+<head>
+    <title>Laualeidja</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600&subset=latin,greek,latin-ext,vietnamese' rel='stylesheet' type='text/css'>
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+    <canvas id="tahvel"> </canvas>
+    <br />
+    <h1>Vajuta nuppu, et leida laud</h1>
+    <input onClick="onClick()" type="image" class="finish" src="img/sec.png" alt="Submit" />
+
+    <body onload="myFunction()">
+        <h1><a id="rand"></a></h1>
+        <h2>Inimesi kohal: <a id="clicks">0</a></h2>
+        <h2><a id="people"></a></h2>
+        <h2><a id="number" visibility: hidden></a></h2>
+    </body>
+
 </html>

@@ -1,37 +1,139 @@
-﻿html, body {
-height: 100%;
-overflow: hidden;
-margin: 0;
+﻿@font-face {
+    font-family: 'Secufont';
+    src: local('Open Sans'), local('OpenSans'), url(http://fonts.gstatic.com/s/opensans/v13/K88pR3goAWT7BTt32Z01mxJtnKITppOI_IvcXXDNrsc.woff2) format('woff2');
 }
+
+html,
+body {
+    height: 100%;
+    overflow: hidden;
+    font-family: "Secufont", sans-serif;
+}
+
 canvas {
-display: table;
-position: absolute;
-height: 100%;
-width: 100%;
-background: radial-gradient(#e6e6e6, #808080, #1a1a1a);
+    background: radial-gradient(#e6e6e6, #808080, #1a1a1a);
+    width: 100%;
 }
-h1{
-text-transform: uppercase;
-position: relative;
-text-align: center;
-display: block;
-color: white;
-text-shadow: 0 5px 1px #6b6b6b;
-margin-left: auto;
-margin-right: auto;
+
+button {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    width: 600px;
+    height: 500px;
+    height: 451.5px;
+    height: 500px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    transform: translateY(-110%);
 }
-.finish{
-height: 250px;
-width: 450px;
-display: flex;
-margin: auto;
-position: absolute;
-bottom: 200px;
-left: 0;
-right: 0;
-transform: translateY(150px);
-transition-duration: 0.2s;
+
+header {
+    font-family: "Secufont", sans-serif;
+    text-transform: uppercase;
+    position: relative;
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-1700%);
+    text-align: center;
+    display: block;
+    color: white;
+    text-shadow: 0 5px 1px #6b6b6b;
 }
-.finish:hover{
-box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+
+h1 {
+    font-family: "Secufont", sans-serif;
+    text-transform: uppercase;
+    position: relative;
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-2025%);
+    text-align: center;
+    display: block;
+    color: white;
+    text-shadow: 0 5px 1px #6b6b6b;
+}
+
+h2 {
+    font-family: "Secufont", sans-serif;
+    text-transform: uppercase;
+    position: relative;
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-2540%);
+    text-align: center;
+    display: block;
+    color: white;
+    text-shadow: 0 5px 1px #6b6b6b;
+}
+
+.button_red {
+    display: block;
+    border-radius: 4px;
+    background-color: red;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: 500px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.button_blue {
+    display: block;
+    border-radius: 4px;
+    background-color: blue;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: 500px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin-left: 550px;
+    margin-top: -77px;
+    margin-bottom: -150px;
+}
+
+.button_green {
+    position: absolute;
+    display: block;
+    border-radius: 4px;
+    background-color: green;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: 500px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin-left: 1100px;
+    margin-top: 78px;
+    margin-bottom: -150px;
+}
+
+.finish {
+    height: 250px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    transform: translateY(-160%);
+    transition-duration: 0.2s;
+}
+
+.finish:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+#prompt {
+    width: 600px;
+    height: 500px;
+    background: black;
+    color: #FFA500;
 }
