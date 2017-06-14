@@ -74,13 +74,18 @@
         }
 
 
-       
-document.getElementById("rand").style.opacity = "1"
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "xhr.php", false);
+        xhr.send();
+        document.getElementById("kell").innerHTML = xhr.responseText;
+
+
+        document.getElementById("rand").style.opacity = "1"
         document.getElementById("rand").disabled = true;
 
-setTimeout(function() {
-document.getElementById("rand").style.opacity = "0"
-        }, 5000); 
+        setTimeout(function() {
+            document.getElementById("rand").style.opacity = "0"
+        }, 5000);
 
 
 
@@ -91,12 +96,12 @@ document.getElementById("rand").style.opacity = "0"
 
             document.getElementById("votebutton").disabled = false;
             document.getElementById("votebutton").src = "img/sec.png";
-        }, 5000); 
+        }, 5000);
 
         document.getElementById("votebutton").src = "img/sectrans.png";
     };
 
-/**/
+    /**/
 
 
 
