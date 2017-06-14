@@ -8,25 +8,38 @@
     var third = 0;
 
     function myFunction() {
-        var userChoicePeople = prompt("Mitu inimest on?");
-        var userChoiceTable = prompt("Mitu lauda on");
-        var userChoiceSitNr = prompt("Mitu inimest saab istuda ühes lauas?");
+        var userChoiceTable = prompt("Mitu lauda on"); // 3
+        var userChoiceSitNr = prompt("Mitu inimest saab istuda ühes lauas?"); //3
 
-        if (userChoicePeople != null) {
-            document.getElementById("people").innerHTML =
-                "Kohti: " + userChoiceTable * userChoiceSitNr;
 
-            for (var a = 1; a <= userChoiceTable; a++) {
-                for (var b = 1; b <= userChoiceSitNr; b++) {
-                    tableNrArray.push(document.getElementById("number").innerHTML = b.toString());
+        document.getElementById("people").innerHTML =
+            "Kohti: " + userChoiceTable * userChoiceSitNr;
+        //console.log(userChoicePeople);
+        //Push numbers into array
+        //lisab 1 - x laudade arv massiivi
+        for (var a = 1; a <= userChoiceTable; a++) {
+            for (var b = 1; b <= userChoiceSitNr; b++) {
+                tableNrArray.push(document.getElementById("number").innerHTML = b.toString());
+                //tableNrArray.push(document.getElementById("number").innerHTML = a.toString());
+                console.log(tableNrArray);
+                console.log(`This is ${b}`);
 
-                    console.log(tableNrArray);
-                    console.log(`This is ${b}`);
-
-                }
             }
         }
+
+        //console.log(tableNrArray);
     }
+    /*
+        function display_array() {
+            var e = "<hr/>";
+
+            for (var y = 0; y < tableNrArray.length; y++) {
+                e += "Element " + y + " = " + tableNrArray[y] + "<br/>";
+            }
+            document.getElementById("Result").innerHTML = e;
+        }
+
+        */
 
     function onClick() {
         var seat = 0;
@@ -45,16 +58,47 @@
 
 
             document.getElementById("clicks").innerHTML = clicks;
-            document.getElementById("rand").innerHTML =
-                "Sinu koht on: " + seat;
+            var randwrap = document.getElementById("rand").innerHTML = //kuhu sa tahad seda inffi
+                "Sinu laud on: " + seat;
 
+            //console.log(tableNrArray[rand]); // Log the item
+            //tableNrArray.splice(rand, 1); // Remove the item from the array
             console.log(`Massivis olevad arvud ${tableNrArray}`);
+            //break;
+            //onClick();
+            //console.log(`Massivis olevad arvud ${tableNrArray}`);
 
         } else {
             console.log(`first ${first}, second ${second}, third ${third}`);
             return;
         }
+
+
+       
+document.getElementById("rand").style.opacity = "1"
+        document.getElementById("rand").disabled = true;
+
+setTimeout(function() {
+document.getElementById("rand").style.opacity = "0"
+        }, 5000); 
+
+
+
+
+        document.getElementById("votebutton").disabled = true;
+
+        setTimeout(function() {
+
+            document.getElementById("votebutton").disabled = false;
+            document.getElementById("votebutton").src = "img/sec.png";
+        }, 5000); 
+
+        document.getElementById("votebutton").src = "img/sectrans.png";
     };
+
+/**/
+
+
 
     function getRandom(min, max) {
         console.log(`random arv on ${Math.floor(Math.random() * (max - min + 1) + min)}`);

@@ -1,23 +1,37 @@
-﻿<html>
+﻿<!DOCTYPE html>
+<html lang="en">
 
 <head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Laualeidja</title>
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600&subset=latin,greek,latin-ext,vietnamese' rel='stylesheet' type='text/css'>
     <script src="js/main.js"></script>
 </head>
 
-<body>
-    <canvas id="tahvel"> </canvas>
-    <br />
-    <h1>Vajuta nuppu, et leida laud</h1>
-    <input onClick="onClick()" type="image" class="finish" src="img/sec.png" alt="Submit" />
+<body onload="myFunction()">
+	<div class="outer">
+		  <div class="middle">
+		    <div class="inner">
+		    <div class="wrapper">
+			  <h1 class="">Vajuta Securitase logo, et leida laud</h1>
 
-    <body onload="myFunction()">
-        <h1><a id="rand"></a></h1>
-        <h2>Inimesi kohal: <a id="clicks">0</a></h2>
-        <h2><a id="people"></a></h2>
-        <h2><a id="number" visibility: hidden></a></h2>
+			</div>
+		     <div class="top-wrapper">
+		     	<h1><a class="pulse" id="rand" ></a></h1>
+		     </div>
+		     <div class="bottom-wrapper">
+		      <h2>Inimesi kohal: <a id="clicks">0</a></h2>
+		      <h2><a id="people"></a></h2>
+		     </div>
+		      <h2><a id="number"></a></h2>
+			  <input id="votebutton" onClick="onClick()" type="image" class="finish" src="img/sec.png" alt="Submit" />
+		    </div>
+		  </div>
+		</div>
+
     </body>
 
 </html>
